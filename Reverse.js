@@ -11,11 +11,19 @@ function reverseA(str) {
 function reverseB(str){
     return str.split("").reverse().join("");
 }
+//Use a substring to reverse
+function reverseC(str){
+    let reversed = "";
+    for(var i = str.length;i>=0;i--){
+        reversed += str.substring(i,i-1);
+    }
+    return reversed;
+}
 
 //Call and use it.
 function revMe(){
     let revresed = "";
     var str = document.getElementById('value').value;
-    reversed = reverseB(str)    
+    reversed = reverseC(str)    
     document.getElementById('result').innerHTML = reversed;    
 }
